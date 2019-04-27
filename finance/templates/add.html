@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Cash
+{% endblock %}
+
+{% block main %}
+
+    <p>You can add up to $ 10000 </p>
+    <form action="/add" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="atm" placeholder="4-digit Card number" type="text"/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="pin" placeholder="Pin" type="password"/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="amount" placeholder="Amount" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add Cash</button>
+    </form>
+        
+{% endblock %}

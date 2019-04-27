@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Coupon
+{% endblock %}
+
+{% block main %}
+
+
+    <form action="/scratch" method="post">
+        <h2>!!!  Congrats  !!!</h2>
+        <h3>You have won a coupon worth:</h3>
+        <h1><code>$ {{code}} </code></h1>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="code" placeholder="Confirm Amount" type="text"/>
+        </div>
+        <br>
+        <img src="https://media.giphy.com/media/1ym5LJ17vp77BL8X5O/giphy.gif" alt = "Loading">
+        <br><br><br><br>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>  
+
+    <style>
+        body {
+          padding: 20px 0;
+        }
+
+        .container {
+          border: 3px solid green;
+          position: relative;
+          width: 500px;
+          height: 600px;
+          margin: 0 auto;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none; 
+          -o-user-select: none;
+          user-select: none;
+        }
+
+        .canvas {
+          position: absolute;
+          top: 0;
+        }
+
+        .form {
+          padding: 20px;
+        }
+    </style>
+{% endblock %}

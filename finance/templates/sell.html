@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell Stock
+{% endblock %}
+
+{% block main %}
+
+
+    <form action="/sell" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Symbol" type="text"/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Share" type="text"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Sell This</button>
+    </form>
+        <br>
+        <br>
+        <h1> <strong>Do you really want to sell this ? </strong></h1>
+        <img src="http://2.bp.blogspot.com/-2MfR378_rmY/Vqz-rmQdM7I/AAAAAAAAHiE/ShwsZXl5J9o/s1600/635700573097456574-XXX-SNEAKPEEK-KAI-KUNGFUPANDA3-DCB-73842474.JPG" alt="warn" style="max-width: 90%" >
+
+{% endblock %}

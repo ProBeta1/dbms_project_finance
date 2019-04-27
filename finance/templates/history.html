@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}
+	HISTORY
+{% endblock %}
+
+{% block main %}
+
+<img src="http://www.berkshirepropertymeet.com/wp-content/uploads/2016/01/master-oogway-quote-yesterday-is-history-todayi-is-mystery.jpg" alt="HISTORY">
+ <table class="table table-striped">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Symbol</th>
+				<th>Shares Owned</th>
+				<th>Total price</th>
+				<th>Date and Time</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for st in rows %}
+		<tr>
+			<td>{{ st.symbol }}</td>
+			<td>{{ st.shares }}</td>
+			<td>{{ (st.shares * st.price_per_share) | abs | usd}}</td>
+			<td>{{ st.created_at }}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+		<tfoot>
+			<td colspan="4">That's All To Show</td>
+		</tfoot>
+	</table>
+
+{% endblock %}
+ 

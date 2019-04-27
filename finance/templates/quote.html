@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+	<style>
+		body{
+			background-repeat: no-repeat;
+			background-size: 100% 
+		}
+	</style>
+	<body background="https://previews.123rf.com/images/phongphan/phongphan1607/phongphan160700002/61917488-arrows-on-dart-board-with-stock-market-graph-background-mean-the-goal-and-success-suitable-for-all-a.jpg" >
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Symbol" type="text"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Get me quote</button>
+    </form>
+{% endblock %}
